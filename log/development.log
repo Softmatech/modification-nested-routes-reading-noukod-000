@@ -3841,3 +3841,43 @@ Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 Cannot render console from 190.115.183.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 190.115.183.138 at 2019-11-05 04:37:19 +0000
 Cannot render console from 190.115.183.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/authors/4" for 190.115.183.138 at 2019-11-05 04:37:38 +0000
+Cannot render console from 190.115.183.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/considerate-transform-1229/modification-nested-routes-reading-noukod-000/app/views/authors/show.html.erb:7: syntax error, unexpected '<', expecting end
+<p>Posts:</p>
+^
+/home/considerate-transform-1229/modification-nested-routes-reading-noukod-000/app/views/authors/show.html.erb:7: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+<p>Posts:</p>
+        ^
+/home/considerate-transform-1229/modification-nested-routes-reading-noukod-000/app/views/authors/show.html.erb:8: syntax error, unexpected '<'
+<% @author.posts.each do |post...
+^
+/home/considerate-transform-1229/modification-nested-routes-reading-noukod-000/app/views/authors/show.html.erb:8: syntax error, unexpected do, expecting end
+<% @author.posts.each do |post| @output_buffer.safe_a...
+                      ^~
+/home/considerate-transform-1229/modification-nested-routes-reading-noukod-000/app/views/authors/show.html.erb:12: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/authors/show.html.erb:7: syntax error, unexpected '<', expecting end
+app/views/authors/show.html.erb:7: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/views/authors/show.html.erb:8: syntax error, unexpected '<'
+app/views/authors/show.html.erb:8: syntax error, unexpected do, expecting end
+app/views/authors/show.html.erb:12: syntax error, unexpected ensure, expecting end-of-input
+  Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.7ms)
